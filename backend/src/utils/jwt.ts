@@ -1,6 +1,7 @@
 import jwt from 'jsonwebtoken';
-import { env } from '../config/env';
-import { JwtPayload, UserRole } from '../types';
+import type { SignOptions } from 'jsonwebtoken';
+import { env } from '../config/env.js';
+import { JwtPayload, UserRole } from '../types/index.js';
 
 export const generateToken = (
   userId: string,
@@ -16,7 +17,7 @@ export const generateToken = (
   };
   
   return jwt.sign(payload, env.JWT_SECRET, {
-    expiresIn: env.JWT_EXPIRES_IN,
+    expiresIn: env.JWT_EXPIRES_IN as SignOptions['expiresIn'],
   });
 };
 

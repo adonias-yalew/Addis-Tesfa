@@ -1,4 +1,4 @@
-import { getSupabase } from '../../db/supabaseClient.js';
+import { getSupabase } from '../../../db/supabaseClient.js';
 
 export interface ProfessionalResponse {
   id: string;

@@ -22,7 +22,7 @@ export class UserController {
   });
   
   update = asyncHandler(async (req: AuthRequest, res: Response) => {
-    const { id } = req.params;
+    const id = req.params.id as string;
     const userId = req.user?.userId;
     
     // Only allow users to update their own profile (or admins)

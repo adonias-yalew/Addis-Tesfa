@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import { getSupabase } from '../../db/supabaseClient.js';
 import { asyncHandler } from '../../middleware/errorHandler.js';
-import { UserRole, PostStatus, ProfessionalStatus } from '../../types/index.js';
+import { PostStatus } from '../../types/index.js';
 
 export class AdminController {
   // Dashboard stats
