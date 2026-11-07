@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import { professionalResponseService } from './service.js';
-import { asyncHandler } from '../../middleware/errorHandler.js';
-import { AuthRequest } from '../../middleware/auth.js';
+import { asyncHandler } from '../../../middleware/errorHandler.js';
+import { AuthRequest } from '../../../middleware/auth.js';
 
 export class ProfessionalResponseController {
   getByPost = asyncHandler(async (req: Request, res: Response) => {

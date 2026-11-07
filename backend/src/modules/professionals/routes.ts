@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import { professionalController } from './controller.js';
-import { authMiddleware, requireRole, requireVerifiedProfessional } from '../../middleware/auth.js';
+import { authMiddleware, requireRole } from '../../middleware/auth.js';
 import { UserRole } from '../../types/index.js';
 
 const router = Router();

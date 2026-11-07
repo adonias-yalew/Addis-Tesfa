@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import { professionalResponseController } from './controller.js';
-import { authMiddleware, requireVerifiedProfessional, requireNonAnonymous } from '../../middleware/auth.js';
+import { authMiddleware, requireVerifiedProfessional, requireNonAnonymous } from '../../../middleware/auth.js';
 
 const router = Router();
 

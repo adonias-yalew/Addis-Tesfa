@@ -1,8 +1,8 @@
 import { Request, Response } from 'express';
 import { professionalService } from './service.js';
 import { asyncHandler } from '../../middleware/errorHandler.js';
-import { AuthRequest, requireRole, requireNonAnonymous } from '../../middleware/auth.js';
-import { UserRole, ProfessionalStatus } from '../../types/index.js';
+import { AuthRequest } from '../../middleware/auth.js';
+import { ProfessionalStatus } from '../../types/index.js';
 
 export class ProfessionalController {
   getAll = asyncHandler(async (_req: Request, res: Response) => {
